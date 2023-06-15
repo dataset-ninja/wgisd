@@ -18,13 +18,16 @@ CV_TASKS: List[CVTask] = [
     CVTask.ObjectDetection(),
     CVTask.InstanceSegmentation(),
 ]
-ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.InstanceSegmentation()]
+ANNOTATION_TYPES: List[AnnotationType] = [
+    AnnotationType.InstanceSegmentation(),
+    AnnotationType.ObjectDetection(),
+]
 
 RELEASE_YEAR: int = 2019
 HOMEPAGE_URL: str = "https://github.com/thsant/wgisd"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = None
+PREVIEW_IMAGE_ID: int = 6565630
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
 GITHUB_URL: str = "https://github.com/dataset-ninja/wgisd"
@@ -38,11 +41,11 @@ DOWNLOAD_ORIGINAL_URL: Optional[
 ] = "https://zenodo.org/record/3361736/files/thsant/wgisd-1.0.0.zip?download=1"
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
-CLASS2COLOR: Optional[Dict[str, List[str]]] = None
+CLASS2COLOR: Optional[Dict[str, List[str]]] = {"uva": [248, 231, 28], "uva_bbox": [208, 2, 27]}
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
 PAPER: Optional[str] = "https://arxiv.org/pdf/1907.11819.pdf"
-CITATION_URL: Optional[str] = "https://zenodo.org/record/3361736#collapseReferences"
+CITATION_URL: Optional[str] = "https://zenodo.org/record/3361736"
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = [
     "Embrapa Agricultural Informatics, Brazil",
     "Institute of Computing, University of Campinas, Brazil",
