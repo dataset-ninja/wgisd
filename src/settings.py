@@ -24,9 +24,9 @@ APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Agricultural()
 CATEGORY: Category = Category.Agriculture()
 
 CV_TASKS: List[CVTask] = [
+    CVTask.InstanceSegmentation(),
     CVTask.SemanticSegmentation(),
     CVTask.ObjectDetection(),
-    CVTask.InstanceSegmentation(),
 ]
 ANNOTATION_TYPES: List[AnnotationType] = [
     AnnotationType.InstanceSegmentation(),
@@ -57,7 +57,7 @@ DOWNLOAD_ORIGINAL_URL: Optional[
 CLASS2COLOR: Optional[Dict[str, List[str]]] = {"uva": [189, 16, 224], "uva_bbox": [208, 2, 27]}
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
-PAPER: Optional[str] = "https://arxiv.org/pdf/1907.11819.pdf"
+PAPER: Optional[str] = "https://arxiv.org/abs/1907.11819"
 CITATION_URL: Optional[str] = "https://zenodo.org/record/3361736/export/hx"
 AUTHORS: Optional[List[str]] = [
     "Thiago Santos",
@@ -75,7 +75,15 @@ ORGANIZATION_URL: Optional[Union[str, List[str]]] = [
     "https://ic.unicamp.br/en/",
 ]
 
-SLYTAGSPLIT: Optional[Dict[str, List[str]]] = None
+SLYTAGSPLIT: Optional[Dict[str, List[str]]] = {
+    "variety": [
+        "Chardonnay",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Sauvignon Blanc",
+        "Syrah",
+    ]
+}
 TAGS: List[str] = None
 
 ##################################

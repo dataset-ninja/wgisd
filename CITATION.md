@@ -22,4 +22,4 @@ If you make use of the WGISD data, please cite the following reference:
 }
 ```
 
-[🔗 Source](https://zenodo.org/record/3361736/export/hx)
+[Source](https://zenodo.org/record/3361736/export/hx)

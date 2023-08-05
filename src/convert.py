@@ -3,9 +3,10 @@
 import os
 
 import numpy as np
-import supervisely as sly
 from cv2 import connectedComponents
 from dotenv import load_dotenv
+
+import supervisely as sly
 from supervisely.io.fs import (
     file_exists,
     get_file_ext,
@@ -75,18 +76,34 @@ def create_ann(image_path):
                     label = sly.Label(rectangle, obj_class_bbox)
                     labels.append(label)
 
-    return sly.Annotation(img_size=(img_height, img_wight), labels=labels)
+    prefix = image_path.split("/")[-1].split("_")[0]
+    tags = [sly.Tag(tag_meta) for tag_meta in tag_metas if tag_meta.name == Prefix2Variety[prefix]]
+
+    return sly.Annotation(img_size=(img_height, img_wight), labels=labels, img_tags=tags)
 
 
 obj_class = sly.ObjClass("uva", sly.Bitmap)
 obj_class_bbox = sly.ObjClass("uva_bbox", sly.Rectangle)
+
+tag_names = [
+    "Chardonnay",
+    "Cabernet Franc",
+    "Cabernet Sauvignon",
+    "Sauvignon Blanc",
+    "Syrah",
+]
+tag_metas = [sly.TagMeta(name, sly.TagValueType.NONE) for name in tag_names]
+
+Prefix2Variety = {
+    prefix: variety for prefix, variety in zip(["CDY", "CFR", "CSV", "SVB", "SYH"], tag_names)
+}
 
 
 def convert_and_upload_supervisely_project(
     api: sly.Api, workspace_id: int, project_name: str
 ) -> sly.ProjectInfo:
     project = api.project.create(workspace_id, project_name, change_name_if_conflict=True)
-    meta = sly.ProjectMeta(obj_classes=[obj_class, obj_class_bbox])
+    meta = sly.ProjectMeta(obj_classes=[obj_class, obj_class_bbox], tag_metas=tag_metas)
     api.project.update_meta(project.id, meta.to_json())
 
     for ds_name in ["train", "test"]:
