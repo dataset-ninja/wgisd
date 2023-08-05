@@ -4,6 +4,4 @@ The dataset consists of 300 images with 6451 labeled objects belonging to 2 diff
 
 Images in the WGISD dataset have pixel-level instance segmentation and bounding box annotations. Due to the nature of the instance segmentation task, it can be automatically transformed into a semantic segmentation task (only one mask for every class). All images are labeled (i.e. with annotations). There are 2 splits in the dataset: *test* (58 images) and *train* (242 images). Alternatively, the dataset could be split into 5 varieties: <span style="background-color: #ecdefc; padding: 2px 4px; border-radius: 4px;">Cabernet Franc</span> (65 images), <span style="background-color: #ecdefc; padding: 2px 4px; border-radius: 4px;">Cabernet Sauvignon</span> (57 images), <span style="background-color: #ecdefc; padding: 2px 4px; border-radius: 4px;">Chardonnay</span> (65 images), <span style="background-color: #ecdefc; padding: 2px 4px; border-radius: 4px;">Sauvignon Blanc</span> (65 images), and <span style="background-color: #ecdefc; padding: 2px 4px; border-radius: 4px;">Syrah</span> (48 images). The dataset was released in 2019 by the Embrapa Agricultural Informatics, Brazil and Institute of Computing, University of Campinas, Brazil.
 
-Here is the visualized example grid with animated annotations:
-
-[animated grid](https://github.com/dataset-ninja/wgisd/raw/main/visualizations/horizontal_grid.webm)
+<img src="https://github.com/dataset-ninja/wgisd/raw/main/visualizations/poster.png">
