@@ -1,6 +1,6 @@
-Dataset **WGISD** can be downloaded in Supervisely format:
+Dataset **WGISD** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/B/Z/JG/uygV62xCvFVgeOIxzTYtFDW3YKhHX7ApR34Q7AWZjq7YEGGRAVvROFnCWgSJHUesjIkxc68ecZAazEXWobcJVksOBbN4IFDOoFWyEtUS56SwRAjDTN1qA49RneIQ.tar)
+ [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/Z/f/dg/Ya178ZYYhdTUl2vM42M0bmXtxU9AzqE85imnksJiXwIedyjGbbjXaqH9pAi7oMbgBLpx8NJAYj8pugwJf4Ol5Ol2eaIpuREA5VazBMKHU0xzAsp9lttZEK20QS0i.tar)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
@@ -11,6 +11,8 @@ pip install --upgrade dataset-tools
 ``` python
 import dataset_tools as dtools
 
-dtools.download(dataset='WGISD', dst_path='~/dtools/datasets/WGISD.tar')
+dtools.download(dataset='WGISD', dst_dir='~/dataset-ninja/')
 ```
-The data in original format can be 🔗[downloaded here](https://zenodo.org/record/3361736/files/thsant/wgisd-1.0.0.zip?download=1)
+Make sure not to overlook the [python code example](https://developer.supervisely.com/getting-started/python-sdk-tutorials/iterate-over-a-local-project) available on the Supervisely Developer Portal. It will give you a clear idea of how to effortlessly work with the downloaded dataset.
+
+The data in original format can be [downloaded here](https://zenodo.org/record/3361736/files/thsant/wgisd-1.0.0.zip?download=1)
