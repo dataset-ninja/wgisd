@@ -59,6 +59,8 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = {"uva": [189, 16, 224], "uva_bbox"
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
 PAPER: Optional[str] = "https://arxiv.org/abs/1907.11819"
+REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {"GitHub":"https://github.com/thsant/wgisd/tree/1.0.0"}
+
 CITATION_URL: Optional[str] = "https://zenodo.org/record/3361736/export/hx"
 AUTHORS: Optional[List[str]] = [
     "Thiago Santos",
@@ -66,6 +68,7 @@ AUTHORS: Optional[List[str]] = [
     "dos Santos Andreza",
     "Avila, Sandra",
 ]
+AUTHORS_CONTACTS: Optional[List[str]] = ["thiago.santos@embrapa.br"]
 
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = [
     "Embrapa Agricultural Informatics, Brazil",
@@ -125,8 +128,10 @@ def get_settings():
     settings["download_original_url"] = DOWNLOAD_ORIGINAL_URL
     settings["class2color"] = CLASS2COLOR
     settings["paper"] = PAPER
+    settings["repository"] = REPOSITORY
     settings["citation_url"] = CITATION_URL
     settings["authors"] = AUTHORS
+    settings["authors_contacts"] = AUTHORS_CONTACTS
     settings["organization_name"] = ORGANIZATION_NAME
     settings["organization_url"] = ORGANIZATION_URL
     settings["slytagsplit"] = SLYTAGSPLIT
