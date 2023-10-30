@@ -81,11 +81,11 @@ ORGANIZATION_URL: Optional[Union[str, List[str]]] = [
 
 SLYTAGSPLIT: Optional[Dict[str, List[str]]] = {
     "variety": [
-        "Chardonnay",
-        "Cabernet Franc",
-        "Cabernet Sauvignon",
-        "Sauvignon Blanc",
-        "Syrah",
+        "chardonnay",
+        "cabernet franc",
+        "cabernet sauvignon",
+        "sauvignon blanc",
+        "syrah",
     ]
 }
 TAGS: List[str] = None
