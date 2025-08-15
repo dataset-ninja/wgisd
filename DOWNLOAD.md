@@ -1,6 +1,6 @@
 Dataset **WGISD** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://assets.supervisely.com/remote/eyJsaW5rIjogImZzOi8vYXNzZXRzLzE0NzFfV0dJU0Qvd2dpc2QtRGF0YXNldE5pbmphLnRhciIsICJzaWciOiAiOG9hRCt3czk3V0hrRm9BODZ1R2M5RGxJdCsvb0NBOFlKRXZka05zSXFmND0ifQ==)
+ [Download](https://assets.supervisely.com/remote/eyJsaW5rIjogInMzOi8vc3VwZXJ2aXNlbHktZGF0YXNldHMvMTQ3MV9XR0lTRC93Z2lzZC1EYXRhc2V0TmluamEudGFyIiwgInNpZyI6ICJGY2N4Z1dJZ1VpN0pZVVdOVnRDQnZsT0h2Z2ttR0pMcC9RUlhhRVdiTVBnPSJ9?response-content-disposition=attachment%3B%20filename%3D%22wgisd-DatasetNinja.tar%22)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
